@@ -38,7 +38,7 @@ flowchart TD
     K --> L["Generar clave: MD5(full_time)"]:::orange
     L --> M["Intentar descifrado AES-CBC"]:::orange
     M --> N["Quitar relleno PKCS7"]:::blue
-    N --> O{"¿ASCII válido?\n(bytes <=127)?"}:::red
+    N --> O{"¿ASCII válido?(bytes <=127)?"}:::red
     O -- No --> J
     O -- Sí --> P["Guardar texto claro y salir"]:::green
     P --> Q{"Texto encontrado?"}:::red
